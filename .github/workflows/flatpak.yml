@@ -1,0 +1,57 @@
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/flatpak.yml
+      - data/**
+      - po/**
+      - src/**
+      - vapi/**
+      - meson.build
+      - meson_options.txt
+
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/flatpak.yml
+      - data/**
+      - po/**
+      - src/**
+      - vapi/**
+      - meson.build
+      - meson_options.txt
+
+name: Flatpak
+
+jobs:
+  flatpak:
+    name: Flatpak
+    runs-on: ubuntu-latest
+
+    container:
+      image: bilelmoussaoui/flatpak-github-actions:gnome-42
+      options: --privileged
+
+    strategy:
+      matrix: { arch: [x86_64, aarch64] }
+      fail-fast: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.0.2
+
+      - name: Install deps
+        run: dnf install -y docker
+
+      - name: Set up QEMU
+        id: qemu
+        uses: docker/setup-qemu-action@v2.0.0
+        with: { platforms: arm64 }
+
+      - name: Build flatpak
+        uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v4
+        with:
+          manifest-path: co.tauos.ValaTemplate.Devel.yml
+          bundle: co.tauos.ValaTemplate.Devel.flatpak
+          cache-key: flatpak-builder-${{ github.sha }}
+          arch: ${{ matrix.arch }}

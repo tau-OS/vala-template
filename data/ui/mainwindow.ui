@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="ValaTemplateMainWindow" parent="HeApplicationWindow">
+    <property name="default-width">360</property>
+    <property name="default-height">360</property>
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="HeAppBar">
+            <property name="show-back">0</property>
+            <property name="flat">1</property>
+            <child>
+              <!-- The primary menu -->
+              <object class="GtkMenuButton">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="menu-model">primary-menu</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <!-- The primary view -->
+          <object class="HeViewMono">
+            <property name="title" translatable="yes">Hello, World!</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label" translatable="yes">This is a sample app using Helium technologies.</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+  <menu id="primary-menu">
+    <section>
+      <item>
+        <!-- The primary menu item to open the preferences -->
+        <attribute name="label" translatable="yes" context="primary menu">Preferences…</attribute>
+        <attribute name="action">win.preferences</attribute>
+      </item>
+      <item>
+        <!-- The primary menu item to open the about -->
+        <attribute name="label" translatable="yes" context="primary menu">About tauOS Vala Template</attribute>
+        <attribute name="action">win.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

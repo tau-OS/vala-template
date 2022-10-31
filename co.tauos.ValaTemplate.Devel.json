@@ -1,0 +1,44 @@
+{
+    "app-id" : "co.tauos.ValaTemplate",
+    "runtime" : "co.tauos.Platform",
+    "runtime-version" : "stable",
+    "sdk" : "co.tauos.Sdk",
+    "command" : "co.tauos.ValaTemplate",
+    "finish-args" : [
+        "--socket=wayland",
+        "--socket=fallback-x11",
+        "--share=ipc",
+        "--device=dri"
+    ],
+    "cleanup" : [
+        "/cache",
+        "/man",
+        "/share/aclocal",
+        "/share/devhelp",
+        "/lib/systemd",
+        "/include",
+        "/lib/pkgconfig",
+        "/lib/libvala*",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/vala",
+        "*.a",
+        "*.la"
+    ],
+    "modules" : [
+        {
+            "name" : "vala-template",
+            "builddir" : true,
+            "buildsystem" : "meson",
+            "config-opts" : [
+                "-Ddevelopment=false"
+            ],
+            "sources" : [
+                {
+                    "type" : "dir",
+                    "path" : "."
+                }
+            ]
+        }
+    ]
+}

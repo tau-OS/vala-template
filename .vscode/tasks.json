@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "meson",
+			"target": "co.tauos.ValaTemplate",
+			"mode": "build",
+			"problemMatcher": [
+				"$meson-gcc"
+			],
+			"group": "build",
+			"label": "Build Application"
+		},
+		{
+			"type": "meson",
+			"target": "co.tauos.ValaTemplate",
+			"mode": "run",
+			"group": "test",
+			"problemMatcher": [],
+			"label": "Run Application"
+		}
+	]
+}

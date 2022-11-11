@@ -9,6 +9,3 @@
 
 # Flatpak related
 /.flatpak
-
-# VS Code related
-/.vscode

@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "mesonbuild.mesonbuild",
+    "prince781.vala",
+		"ms-vscode.cpptools"
+  ]
+}

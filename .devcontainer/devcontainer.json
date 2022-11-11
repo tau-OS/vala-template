@@ -1,0 +1,27 @@
+{
+	"name": "Fedora",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"VERSION": "37"
+		}
+	},
+	"settings": {},
+	"extensions": [
+		"mesonbuild.mesonbuild",
+		"prince781.vala",
+		"ms-vscode.cpptools"
+	],
+	"remoteUser": "vscode",
+	"containerUser": "vscode",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,Z",
+	"runArgs": [
+		"--security-opt=label=disable",
+		"--userns=keep-id",
+		"-e XDG_RUNTIME_DIR=/tmp",
+		"-e WAYLAND_DISPLAY=${localEnv:WAYLAND_DISPLAY}",
+		"-e DBUS_SESSION_BUS_ADDRESS=unix:path=/tmp/bus",
+		"-v${localEnv:XDG_RUNTIME_DIR}/${localEnv:WAYLAND_DISPLAY}:/tmp/${localEnv:WAYLAND_DISPLAY}",
+		"-v${localEnv:XDG_RUNTIME_DIR}/bus:/tmp/bus"
+	]
+}

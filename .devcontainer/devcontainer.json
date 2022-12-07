@@ -22,6 +22,7 @@
 		"-e WAYLAND_DISPLAY=${localEnv:WAYLAND_DISPLAY}",
 		"-e DBUS_SESSION_BUS_ADDRESS=unix:path=/tmp/bus",
 		"-v${localEnv:XDG_RUNTIME_DIR}/${localEnv:WAYLAND_DISPLAY}:/tmp/${localEnv:WAYLAND_DISPLAY}",
-		"-v${localEnv:XDG_RUNTIME_DIR}/bus:/tmp/bus"
+		"-v${localEnv:XDG_RUNTIME_DIR}/bus:/tmp/bus",
+		"--device=/dev/dri:/dev/dri"
 	]
 }

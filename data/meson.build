@@ -18,7 +18,7 @@ install_data(
     install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas'),
 )
 
-i18n.merge_file(
+desktop_file = i18n.merge_file(
     input: configure_file(
         input: meson.project_name() + '.desktop.in.in',
         output: meson.project_name() + '.desktop.in',
@@ -30,6 +30,11 @@ i18n.merge_file(
     install: true,
     install_dir: join_paths(get_option('datadir'), 'applications'),
 )
+
+desktop_file_validate = find_program('desktop-file-validate', required: false)
+if desktop_file_validate.found()
+    test('validate-desktop', desktop_file_validate, args: [desktop_file])
+endif
 
 i18n.merge_file(
     input: configure_file(

@@ -6,6 +6,7 @@
 /_build
 /build
 /builddir
+subprojects/blueprint-compiler
 
 # Flatpak related
 /.flatpak

@@ -3,14 +3,7 @@
     "runtime": "co.tauos.Platform",
     "runtime-version": "stable",
     "sdk": "co.tauos.Sdk",
-    "sdk-extensions": ["org.freedesktop.Sdk.Extension.vala"],
-    "desktop-file-name-suffix": " (Development)",
-    "command": "co.tauos.ValaTemplate",
     "finish-args": ["--socket=wayland", "--socket=fallback-x11", "--share=ipc", "--device=dri"],
-    "build-options": {
-        "append-path": "/usr/lib/sdk/vala/bin",
-        "prepend-ld-library-path": "/usr/lib/sdk/vala/lib"
-    },
     "cleanup": [
         "/cache",
         "/man",
@@ -31,7 +24,7 @@
             "name": "vala-template",
             "builddir": true,
             "buildsystem": "meson",
-            "config-opts": ["-Ddevelopment=true"],
+            "config-opts": ["-Ddevelopment=false"],
             "sources": [
                 {
                     "type": "dir",

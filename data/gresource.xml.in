@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/co/tauos/ValaTemplate">
+  <gresource prefix="@APP_PATH@">
     <file compressed="true" preprocess="xml-stripblanks" alias="mainwindow.ui">ui/mainwindow.ui</file>
   </gresource>
 </gresources>

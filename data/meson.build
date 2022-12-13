@@ -2,6 +2,9 @@
 # Think icons, UI files, settings schemas, and other assets.
 # For your convenience, we included the essentials. Make sure to rename them (and modify the contents) to use your actual app id.
 
+# Convert the app id to a GNOME style path identifier
+path_identifier = '/' + meson.project_name().replace('.', '/')
+
 subdir('icons')
 subdir('ui')
 
@@ -12,7 +15,7 @@ subdir('ui')
 
 desktop_file = i18n.merge_file(
     input: configure_file(
-        input: meson.project_name() + '.desktop.in.in',
+        input: 'desktop.in.in',
         output: meson.project_name() + '.desktop.in',
         configuration: {
             'ICON_NAME': meson.project_name(),
@@ -38,7 +41,7 @@ endif
 
 appstream_file = i18n.merge_file(
     input: configure_file(
-        input: meson.project_name() + '.appdata.xml.in.in',
+        input: 'appdata.xml.in.in',
         output: meson.project_name() + '.appdata.xml.in',
         configuration: {
             'APP_ID': meson.project_name(),
@@ -65,7 +68,14 @@ endif
 # For more information about GSettings and the gschema format, see: https://wiki.gnome.org/HowDoI/GSettings
 
 install_data(
-    meson.project_name() + '.gschema.xml',
+    configure_file(
+        input: 'gschema.xml.in',
+        output: meson.project_name() + '.gschema.xml',
+        configuration: {
+            'APP_ID': meson.project_name(),
+            'APP_PATH': path_identifier,
+        },
+    ),
     install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas'),
 )
 
@@ -84,7 +94,14 @@ endif
 
 gresources = gnome.compile_resources(
     'resources',
-    'co.tauos.ValaTemplate.gresource.xml',
+    configure_file(
+        input: 'gresource.xml.in',
+        output: meson.project_name() + '.gresource.xml',
+        configuration: {
+            'APP_ID': meson.project_name(),
+            'APP_PATH': path_identifier,
+        },
+    ),
     source_dir: meson.current_build_dir(),
     dependencies: blueprints,
     c_name: 'resources',

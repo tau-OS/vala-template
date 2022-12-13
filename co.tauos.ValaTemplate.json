@@ -3,7 +3,6 @@
     "runtime": "co.tauos.Platform",
     "runtime-version": "stable",
     "sdk": "co.tauos.Sdk",
-    "command": "co.tauos.ValaTemplate",
     "finish-args": ["--socket=wayland", "--socket=fallback-x11", "--share=ipc", "--device=dri"],
     "cleanup": [
         "/cache",

@@ -6,14 +6,18 @@
             "VERSION": "37"
         }
     },
-    "settings": {},
-    "extensions": [
-        "mesonbuild.mesonbuild",
-        "prince781.vala",
-        "ms-vscode.cpptools",
-        "bodil.blueprint-gtk",
-        "esbenp.prettier-vscode"
-    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "mesonbuild.mesonbuild",
+                "prince781.vala",
+                "ms-vscode.cpptools",
+                "bodil.blueprint-gtk",
+                "esbenp.prettier-vscode",
+                "colinkiama.linter-vala"
+            ]
+        }
+    },
     "remoteUser": "vscode",
     "containerUser": "vscode",
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,Z",

@@ -1,5 +1,5 @@
 public class ValaTemplate.Application : He.Application {
-    private const GLib.ActionEntry app_entries[] = {
+    private const GLib.ActionEntry APP_ENTRIES[] = {
         { "quit", quit },
     };
 
@@ -22,14 +22,14 @@ public class ValaTemplate.Application : He.Application {
 
     public override void startup () {
         Gdk.RGBA accent_color = { 0 };
-        accent_color.parse("#888888");
-        default_accent_color = He.Color.from_gdk_rgba(accent_color);
+        accent_color.parse ("#888888");
+        default_accent_color = He.Color.from_gdk_rgba (accent_color);
 
         resource_base_path = "/com/fyralabs/ValaTemplate";
 
         base.startup ();
 
-        add_action_entries (app_entries, this);
+        add_action_entries (APP_ENTRIES, this);
 
         new MainWindow (this);
     }

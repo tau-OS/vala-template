@@ -25,7 +25,7 @@ public class ValaTemplate.Application : He.Application {
         accent_color.parse("#888888");
         default_accent_color = He.Color.from_gdk_rgba(accent_color);
 
-        resource_base_path = "/co/tauos/ValaTemplate";
+        resource_base_path = "/com/fyralabs/ValaTemplate";
 
         base.startup ();
 

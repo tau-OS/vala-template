@@ -1,0 +1,3 @@
+data/ui/mainwindow.blp
+src/Application.vala
+src/MainWindow.vala

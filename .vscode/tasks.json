@@ -10,7 +10,7 @@
         },
         {
             "type": "meson",
-            "target": "src/co.tauos.ValaTemplate",
+            "target": "src/com.FyraLabs.ValaTemplate",
             "mode": "run",
             "group": "test",
             "problemMatcher": [],

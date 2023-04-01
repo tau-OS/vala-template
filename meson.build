@@ -1,4 +1,4 @@
-project('co.tauos.ValaTemplate', ['c', 'vala'], version: '0.1.0')
+project('com.fyralabs.ValaTemplate', ['c', 'vala'], version: '0.1.0')
 
 subproject('blueprint-compiler', required: false)
 

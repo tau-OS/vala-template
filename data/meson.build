@@ -2,9 +2,6 @@
 # Think icons, UI files, settings schemas, and other assets.
 # For your convenience, we included the essentials. Make sure to rename them (and modify the contents) to use your actual app id.
 
-# Convert the app id to a GNOME style path identifier
-path_identifier = '/' + meson.project_name().replace('.', '/')
-
 subdir('icons')
 subdir('ui')
 

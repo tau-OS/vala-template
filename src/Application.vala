@@ -25,7 +25,7 @@ public class ValaTemplate.Application : He.Application {
         accent_color.parse ("#8C56BF");
         default_accent_color = He.Color.from_gdk_rgba (accent_color);
 
-        resource_base_path = "/com/fyralabs/ValaTemplate";
+        resource_base_path = Config.APP_PATH;
 
         base.startup ();
 

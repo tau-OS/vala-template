@@ -1,9 +1,10 @@
 # Values defined here are accessible from within Vala.
-# This can be useful for setting build-time constants, such as the version or app id. 
+# This can be useful for setting build-time constants, such as the version or app id.
 # See the Config.vapi file for more information.
 
 config = configuration_data()
 config.set_quoted('APP_ID', meson.project_name())
+config.set_quoted('APP_PATH', path_identifier)
 config.set_quoted(
     'NAME_SUFFIX',
     get_option('development') ? ' (Development)' : '',

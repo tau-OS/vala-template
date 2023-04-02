@@ -15,7 +15,7 @@ subdir('ui')
 
 desktop_file = i18n.merge_file(
     input: configure_file(
-        input: 'desktop.in.in',
+        input: 'app.desktop.in.in',
         output: meson.project_name() + '.desktop.in',
         configuration: {
             'ICON_NAME': meson.project_name(),
@@ -23,7 +23,7 @@ desktop_file = i18n.merge_file(
         },
     ),
     output: meson.project_name() + '.desktop',
-    po_dir: meson.source_root() / 'po' / 'extra',
+    po_dir: meson.source_root() / 'po',
     type: 'desktop',
     install: true,
     install_dir: get_option('datadir') / 'applications',
@@ -49,7 +49,7 @@ appstream_file = i18n.merge_file(
         },
     ),
     output: meson.project_name() + '.appdata.xml',
-    po_dir: meson.source_root() / 'po' / 'extra',
+    po_dir: meson.source_root() / 'po',
     install: true,
     install_dir: get_option('datadir') / 'metainfo',
 )

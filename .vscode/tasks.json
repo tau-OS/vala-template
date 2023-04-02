@@ -6,11 +6,11 @@
             "mode": "build",
             "problemMatcher": ["$meson-gcc"],
             "group": "build",
-            "label": "Build Application"
+            "label": "Meson: Build all targets"
         },
         {
             "type": "meson",
-            "target": "src/com.FyraLabs.ValaTemplate",
+            "target": "src/com.fyralabs.ValaTemplate",
             "mode": "run",
             "group": "test",
             "problemMatcher": [],

@@ -50,7 +50,7 @@ dependencies = [
 
 executable(
     meson.project_name(),
-    sources,
+    [blueprints_workaround, sources],
     dependencies: dependencies,
     install: true,
 )

@@ -19,31 +19,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.16.2\n"
 
-#: data/app.desktop.in.in:4
 #, fuzzy
 msgid "tauOS Vala Template"
 msgstr "About tauOS Vala Template"
 
-#: data/app.desktop.in.in:5
 msgid "A template for tauOS apps written in Vala"
 msgstr ""
 
-#: data/ui/mainwindow.blp:5
 msgid "Preferences…"
 msgstr "Pwefewences…"
 
-#: data/ui/mainwindow.blp:6
 msgid "About tauOS Vala Template"
 msgstr "About tauOS Vala Template"
 
-#: data/ui/mainwindow.blp:26
 msgid "Hello, World!"
 msgstr "Hewwo, Wowld!"
 
-#: data/ui/mainwindow.blp:29
 msgid "This is a sample app using Helium technologies."
 msgstr "This is a sample app using Hewium technowogies."
 
-#: src/MainWindow.vala:7
 msgid "Vala Template"
 msgstr "Vala Template"

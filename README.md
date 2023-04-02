@@ -8,9 +8,6 @@ Get started building an amazing app with libhelium & Vala today!
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
-> **Note**
-> We know this README is barren, we're still working on it. If you have any questions or need help, feel free to join our [Discord](https://discord.gg/5fdPuxTg5Q)!
-
 ![Main Window](data/shot.png)
 
 ## 🛠️ Dependencies

@@ -2,7 +2,7 @@
 
 # libhelium Vala Template
 
-Get started building an amazing app with libhelium & Vala today!
+The quickest way to get started with libhelium & Vala.
 
 ###
 

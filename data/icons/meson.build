@@ -9,9 +9,3 @@ install_data(
     rename: '@0@.svg'.format(meson.project_name()),
     install_dir: get_option('datadir') / 'icons/hicolor/scalable/apps',
 )
-
-install_data(
-    'symbolic.svg',
-    rename: '@0@-symbolic.svg'.format(meson.project_name()),
-    install_dir: get_option('datadir') / 'icons/hicolor/symbolic/apps',
-)

@@ -1,6 +1,6 @@
 [GtkTemplate (ui = "/com/fyralabs/ValaTemplate/mainwindow.ui")]
 public class ValaTemplate.MainWindow : He.ApplicationWindow {
-    private const GLib.ActionEntry APP_ENTRIES[] = {
+    private const GLib.ActionEntry WINDOW_ENTRIES[] = {
         { "about", action_about },
     };
 
@@ -32,6 +32,6 @@ public class ValaTemplate.MainWindow : He.ApplicationWindow {
 
 
     construct {
-        add_action_entries (APP_ENTRIES, this);
+        add_action_entries (WINDOW_ENTRIES, this);
     }
 }

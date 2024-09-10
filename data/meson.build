@@ -20,7 +20,7 @@ desktop_file = i18n.merge_file(
         },
     ),
     output: meson.project_name() + '.desktop',
-    po_dir: meson.source_root() / 'po',
+    po_dir: meson.project_source_root() / 'po',
     type: 'desktop',
     install: true,
     install_dir: get_option('datadir') / 'applications',
@@ -46,7 +46,7 @@ appstream_file = i18n.merge_file(
         },
     ),
     output: meson.project_name() + '.appdata.xml',
-    po_dir: meson.source_root() / 'po',
+    po_dir: meson.project_source_root() / 'po',
     install: true,
     install_dir: get_option('datadir') / 'metainfo',
 )
@@ -106,7 +106,6 @@ gresources = gnome.compile_resources(
 )
 
 add_project_arguments(
-    '--gresourcesdir',
-    meson.current_build_dir(),
+    '--gresourcesdir', meson.current_build_dir(),
     language: ['vala'],
 )

@@ -8,41 +8,41 @@ msgstr ""
 "Project-Id-Version: com.fyralabs.ValaTemplate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-02 00:00+0000\n"
-"PO-Revision-Date: 2023-05-27 07:12+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Dutch <https://weblate.fyralabs.com/projects/tauOS/vala-"
-"template/nl/>\n"
+"PO-Revision-Date: 2025-05-17 11:46+0000\n"
+"Last-Translator: Feike Donia <feikedonia@proton.me>\n"
+"Language-Team: Dutch <https://weblate.fyralabs.com/projects/tauOS/"
+"vala-template/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #: data/app.desktop.in.in:4
 msgid "tauOS Vala Template"
-msgstr ""
+msgstr "tauOS Vala Sjabloon"
 
 #: data/app.desktop.in.in:5
 msgid "A template for tauOS apps written in Vala"
-msgstr ""
+msgstr "Een sjabloon voor tauOS-apps geschreven in Vala"
 
 #: data/ui/mainwindow.blp:5
 msgid "Preferences…"
-msgstr ""
+msgstr "Voorkeuren…"
 
 #: data/ui/mainwindow.blp:6
 msgid "About tauOS Vala Template"
-msgstr ""
+msgstr "Over tauOS Vala Sjabloon"
 
 #: data/ui/mainwindow.blp:26
 msgid "Hello, World!"
-msgstr ""
+msgstr "Hello, World!"
 
 #: data/ui/mainwindow.blp:29
 msgid "This is a sample app using Helium technologies."
-msgstr ""
+msgstr "Dit is een voorbeeldapp die gebruikmaakt van Helium-technologieën."
 
 #: src/MainWindow.vala:7
 msgid "Vala Template"
-msgstr ""
+msgstr "Vala Sjabloon"
